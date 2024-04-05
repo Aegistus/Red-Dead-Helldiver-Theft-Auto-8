@@ -7,12 +7,12 @@ public class PlayerInteraction : MonoBehaviour
 {
     public event Action<bool> OnInteractStateChange;
 
+    [SerializeField] Transform head;
     public LayerMask interactableLayers;
     public float interactionDistance = 1f;
     int openDoorSoundID;
 
     AgentEquipment agentEquipment;
-    Vector3 halfExtents = new Vector3(1, 1, 2);
     Cow currentlyMilking;
 
     void Start()
@@ -24,7 +24,7 @@ public class PlayerInteraction : MonoBehaviour
     RaycastHit rayHit;
     void Update()
     {
-        if (Physics.BoxCast(transform.position + Vector3.up, halfExtents, transform.forward, out rayHit, Quaternion.identity, interactionDistance, interactableLayers))
+        if (Physics.Raycast(head.position, head.forward, out rayHit, interactionDistance, interactableLayers))
         {
             if (Input.GetKeyDown(KeyCode.E))
             {

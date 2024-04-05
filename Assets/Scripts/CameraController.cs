@@ -32,8 +32,10 @@ public class CameraController : MonoBehaviour
     void LateUpdate()
 	{
         float verticalMovement = -Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+        float horizontalMovement = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         float xRotation = transform.eulerAngles.x + verticalMovement;
-        // 0 - 80 or 280 - 360
+        float yRotation = transform.eulerAngles.y + horizontalMovement;
+        
         if (xRotation > 180)
         {
             xRotation -= 360;
@@ -41,7 +43,7 @@ public class CameraController : MonoBehaviour
         xRotation = Mathf.Clamp(xRotation, cameraVerticalMinAngle, cameraVerticalMaxAngle);
 
         transform.position = Vector3.Lerp(transform.position, targetTransform.position, smoothSpeed * Time.deltaTime);
-        transform.eulerAngles = new Vector3(xRotation, targetTransform.eulerAngles.y, transform.eulerAngles.z);
+        transform.eulerAngles = new Vector3(xRotation, yRotation, transform.eulerAngles.z);
 	}
 
     void Update()

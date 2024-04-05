@@ -716,10 +716,6 @@ PrefabInstance:
       propertyPath: targetTransform
       value: 
       objectReference: {fileID: 2075813528}
-    - target: {fileID: 5870918263217181923, guid: 03b57df4d1b71c64c9896d42427592b5, type: 3}
-      propertyPath: cameraVerticalMinAngle
-      value: -80
-      objectReference: {fileID: 0}
     - target: {fileID: 5870918263217181924, guid: 03b57df4d1b71c64c9896d42427592b5, type: 3}
       propertyPath: m_Name
       value: CameraHolder
@@ -732,7 +728,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh101214
+  m_Name: pb_Mesh37120
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

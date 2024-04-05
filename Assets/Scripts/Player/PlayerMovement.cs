@@ -5,16 +5,19 @@ using System;
 
 public class PlayerMovement : AgentMovement
 {
-    CharacterController charController;
-
+    [SerializeField] Transform torso;
+    [SerializeField] Transform legs;
     [SerializeField] LayerMask groundLayer;
     [SerializeField] float moveSpeed;
     [SerializeField] float turnSpeed;
 
+    Transform cameraTransform;
+    CharacterController charController;
     Vector3 moveVector;
 
     void Awake()
     {
+        cameraTransform = FindObjectOfType<CameraController>().transform;
         charController = GetComponent<CharacterController>();
     }
 
@@ -24,22 +27,22 @@ public class PlayerMovement : AgentMovement
         moveVector = Vector3.zero;
         if (Input.GetKey(KeyCode.W))
         {
-            moveVector += Vector3.forward;
+            moveVector += cameraTransform.forward;
         }
         if (Input.GetKey(KeyCode.S))
         {
-            moveVector -= Vector3.forward;
+            moveVector -= cameraTransform.forward;
         }
         if (Input.GetKey(KeyCode.A))
         {
-            moveVector -= Vector3.right;
+            moveVector -= cameraTransform.right;
         }
         if (Input.GetKey(KeyCode.D))
         {
-            moveVector += Vector3.right;
+            moveVector += cameraTransform.right;
         }
         moveVector = moveVector.normalized;
-        moveVector = transform.TransformDirection(moveVector);
+        //moveVector = transform.TransformDirection(moveVector);
         charController.Move(moveVector * moveSpeed * Time.deltaTime);
 
         RaycastHit rayHit;
@@ -49,9 +52,11 @@ public class PlayerMovement : AgentMovement
         }
 
         // rotational movement
-        float yRotation = Input.GetAxis("Mouse X");
-        yRotation *= turnSpeed;
-        transform.Rotate(0, yRotation * Time.deltaTime, 0, Space.Self);
+        torso.rotation = cameraTransform.rotation;
+        legs.rotation = cameraTransform.rotation;
+        legs.eulerAngles = new Vector3(0, legs.eulerAngles.y, 0);
+
+        // fix falling through map
         if (transform.position.y <= -100)
         {
             transform.position = new Vector3(transform.position.x, 3, transform.position.z);
