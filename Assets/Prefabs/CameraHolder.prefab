@@ -166,6 +166,7 @@ MonoBehaviour:
   frontCamera: {fileID: 5870918264131386617}
   backCamera: {fileID: 1694735261}
   smoothSpeed: 5
+  mouseSensitivity: 500
 --- !u!1 &5870918264131386619
 GameObject:
   m_ObjectHideFlags: 0

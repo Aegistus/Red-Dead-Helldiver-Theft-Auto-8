@@ -8,6 +8,9 @@ public class CameraController : MonoBehaviour
     public Camera frontCamera;
     public Camera backCamera;
 	public float smoothSpeed = .5f;
+    public float mouseSensitivity = 500f;
+    public float cameraVerticalMaxAngle = 80f;
+    public float cameraVerticalMinAngle = -80f;
 
     CameraShake camShake;
     AgentEquipment equipment;
@@ -28,8 +31,17 @@ public class CameraController : MonoBehaviour
 
     void LateUpdate()
 	{
-		transform.position = Vector3.Lerp(transform.position, targetTransform.position, smoothSpeed * Time.deltaTime);
-        transform.eulerAngles = new Vector3(transform.eulerAngles.x, targetTransform.eulerAngles.y, transform.eulerAngles.z);
+        float verticalMovement = -Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+        float xRotation = transform.eulerAngles.x + verticalMovement;
+        // 0 - 80 or 280 - 360
+        if (xRotation > 180)
+        {
+            xRotation -= 360;
+        }
+        xRotation = Mathf.Clamp(xRotation, cameraVerticalMinAngle, cameraVerticalMaxAngle);
+
+        transform.position = Vector3.Lerp(transform.position, targetTransform.position, smoothSpeed * Time.deltaTime);
+        transform.eulerAngles = new Vector3(xRotation, targetTransform.eulerAngles.y, transform.eulerAngles.z);
 	}
 
     void Update()
