@@ -115,7 +115,7 @@ MonoBehaviour:
   OnRecoil:
     m_PersistentCalls:
       m_Calls: []
-  holdOffset: {x: -0.19, y: -0.314, z: 1.196}
+  holdOffset: {x: 0, y: 0, z: 0}
   damageMin: 10
   damageMax: 20
   camShakeProperties:
