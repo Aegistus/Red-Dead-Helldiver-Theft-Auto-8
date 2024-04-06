@@ -163,12 +163,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetTransform: {fileID: 0}
+  cameraTransform: {fileID: 3220577933290761705}
   frontCamera: {fileID: 5870918264131386617}
   backCamera: {fileID: 1694735261}
   smoothSpeed: 5
   mouseSensitivity: 500
   cameraVerticalMaxAngle: 80
   cameraVerticalMinAngle: -80
+  normalOffset: {x: 1.125, y: 1.87, z: -3.5}
+  aimedOffset: {x: 1, y: 1.83, z: -1.3}
+  aimSpeed: 10
 --- !u!1 &5870918264131386619
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,12 +14,14 @@ public class PlayerMovement : AgentMovement
     public bool inCombatMode = true;
     Transform cameraTransform;
     CharacterController charController;
+    PlayerController playerController;
     Vector3 moveVector;
 
     void Awake()
     {
         cameraTransform = FindObjectOfType<CameraController>().transform;
         charController = GetComponent<CharacterController>();
+        playerController = GetComponent<PlayerController>();
     }
 
     void Update()
@@ -56,7 +58,7 @@ public class PlayerMovement : AgentMovement
         // rotational movement
         if (inCombatMode)
         {
-            if (moveVector.sqrMagnitude > 0)
+            if (moveVector.sqrMagnitude > 0 && !playerController.Aim)
             {
                 transform.LookAt(transform.position + moveVector);
                 torso.localRotation = Quaternion.identity;
