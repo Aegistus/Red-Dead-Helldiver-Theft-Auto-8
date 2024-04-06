@@ -24,6 +24,10 @@ public class AgentAttack : MonoBehaviour
         {
             equipment.CurrentWeaponAttack.BeginAttack();
         }
+        if (controller.DuringAttack && equipment.CurrentWeapon != null)
+        {
+            equipment.CurrentWeaponAttack.DuringAttack();
+        }
         if (controller.EndAttack && equipment.CurrentWeapon != null)
         {
             equipment.CurrentWeaponAttack.EndAttack();

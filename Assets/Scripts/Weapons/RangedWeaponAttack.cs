@@ -4,6 +4,7 @@ using UnityEngine;
 
 public abstract class RangedWeaponAttack : WeaponAttack
 {
+    [SerializeField] protected string muzzleFlash;
     [SerializeField] protected string shootSound;
     [SerializeField] protected string projectileID;
     [SerializeField] protected Transform projectileSpawnPoint;
@@ -24,7 +25,7 @@ public abstract class RangedWeaponAttack : WeaponAttack
 
     public void ApplyRecoil()
     {
-        weaponModel.Rotate(Vector3.left, Random.Range(-recoilXRotation, recoilXRotation));
+        weaponModel.Rotate(Vector3.left, Random.Range(0, recoilXRotation));
         weaponModel.Rotate(Vector3.up, Random.Range(-recoilYRotation, recoilYRotation));
         OnRecoil.Invoke();
     }
