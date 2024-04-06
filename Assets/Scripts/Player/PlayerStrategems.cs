@@ -7,6 +7,9 @@ using System;
 public class PlayerStrategems : MonoBehaviour
 {
     public event Action OnInputChange;
+    public event Action OnEnterStratagemMode;
+    public event Action OnExitStratagemMode;
+    public event Action OnReadyToThrow;
 
     [SerializeField] Transform strategemBallSpawnPoint;
     [SerializeField] float throwForce = 100f;
@@ -71,6 +74,7 @@ public class PlayerStrategems : MonoBehaviour
     {
         inStrategemMode = true;
         currentInput = new List<DDR_Direction>();
+        OnEnterStratagemMode?.Invoke();
     }
 
     public void ExitStrategemMode()
@@ -83,6 +87,7 @@ public class PlayerStrategems : MonoBehaviour
         }
         currentInput = new List<DDR_Direction>();
         OnInputChange?.Invoke();
+        OnExitStratagemMode?.Invoke();
     }
 
     void ThrowBall()
@@ -112,6 +117,7 @@ public class PlayerStrategems : MonoBehaviour
         {
             currentStrategemBall = Instantiate(completed.strategemBallPrefab, strategemBallSpawnPoint.position, strategemBallSpawnPoint.rotation, transform);
             readyToThrow = true;
+            OnReadyToThrow?.Invoke();
             currentInput = new List<DDR_Direction>();
             OnInputChange?.Invoke();
         }
