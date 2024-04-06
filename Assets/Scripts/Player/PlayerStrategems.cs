@@ -68,6 +68,10 @@ public class PlayerStrategems : MonoBehaviour
                 PrintInput();
             }
         }
+        if (currentStrategemBall != null)
+        {
+            currentStrategemBall.transform.localPosition = Vector3.zero;
+        }
     }
 
     public void EnterStrategemMode()
@@ -115,7 +119,7 @@ public class PlayerStrategems : MonoBehaviour
         }
         if (completed != null)
         {
-            currentStrategemBall = Instantiate(completed.strategemBallPrefab, strategemBallSpawnPoint.position, strategemBallSpawnPoint.rotation, transform);
+            currentStrategemBall = Instantiate(completed.strategemBallPrefab, strategemBallSpawnPoint.position, strategemBallSpawnPoint.rotation, strategemBallSpawnPoint);
             readyToThrow = true;
             OnReadyToThrow?.Invoke();
             currentInput = new List<DDR_Direction>();
