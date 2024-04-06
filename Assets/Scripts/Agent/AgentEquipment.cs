@@ -24,6 +24,8 @@ public class AgentEquipment : MonoBehaviour
     public Weapon PrimaryWeapon { get; private set; }
     public Weapon SecondaryWeapon { get; private set; }
 
+    PlayerStrategems stratagems;
+
     public class Weapon
     {
         public GameObject gameObject;
@@ -62,13 +64,24 @@ public class AgentEquipment : MonoBehaviour
         {
             UnEquip(SecondaryWeapon);
         }
+        if (TryGetComponent(out stratagems))
+        {
+            stratagems.OnEnterStratagemMode += () => UnEquip(CurrentWeapon);
+            stratagems.OnExitStratagemMode += () => StartCoroutine(EquipWithDelay(PrimaryWeapon, .1f));
+        }
+    }
+
+    IEnumerator EquipWithDelay(Weapon weapon, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        Equip(weapon);
     }
 
     public void Equip(Weapon weapon)
     {
         if (weapon == null)
         {
-            arms.rotation = Quaternion.identity;
+            arms.localRotation = Quaternion.identity;
             return;
         }
         CurrentWeapon = weapon;
@@ -83,10 +96,11 @@ public class AgentEquipment : MonoBehaviour
 
     public void UnEquip(Weapon weapon)
     {
-        if (weapon != null)
+        if (weapon != null && weapon == CurrentWeapon)
         {
             weapon.gameObject.SetActive(false);
             weapon.gameObject.transform.localEulerAngles = Vector3.zero;
+            CurrentWeapon = null;
         }
     }
 
