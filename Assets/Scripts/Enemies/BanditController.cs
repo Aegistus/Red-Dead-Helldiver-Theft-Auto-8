@@ -18,11 +18,11 @@ public class BanditController : AgentController
 
     private void Update()
     {
-        Attack = false;
+        EndAttack = false;
         Reload = false;
         if (movement.InAttackRange && canAttack)
         {
-            Attack = true;
+            EndAttack = true;
             StartCoroutine(AttackDelayCoroutine());
         }
         if (equipment.CurrentWeaponAmmunition.CurrentLoadedAmmo == 0)

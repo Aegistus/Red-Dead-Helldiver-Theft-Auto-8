@@ -7,7 +7,7 @@ public class PlayerInteraction : MonoBehaviour
 {
     public event Action<bool> OnInteractStateChange;
 
-    [SerializeField] Transform head;
+    [SerializeField] Transform raycastOrigin;
     public LayerMask interactableLayers;
     public float interactionDistance = 1f;
     int openDoorSoundID;
@@ -24,7 +24,7 @@ public class PlayerInteraction : MonoBehaviour
     RaycastHit rayHit;
     void Update()
     {
-        if (Physics.Raycast(head.position, head.forward, out rayHit, interactionDistance, interactableLayers))
+        if (Physics.Raycast(raycastOrigin.position, raycastOrigin.forward, out rayHit, interactionDistance, interactableLayers))
         {
             if (Input.GetKeyDown(KeyCode.E))
             {

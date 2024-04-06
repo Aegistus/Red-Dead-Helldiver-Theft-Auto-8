@@ -20,9 +20,13 @@ public class AgentAttack : MonoBehaviour
             equipment.TrySwitchWeapon();
             return;
         }
-        if (controller.Attack && equipment.CurrentWeapon != null)
+        if (controller.StartAttack && equipment.CurrentWeapon != null)
         {
             equipment.CurrentWeaponAttack.BeginAttack();
+        }
+        if (controller.EndAttack && equipment.CurrentWeapon != null)
+        {
+            equipment.CurrentWeaponAttack.EndAttack();
         }
         if (controller.Reload)
         {
