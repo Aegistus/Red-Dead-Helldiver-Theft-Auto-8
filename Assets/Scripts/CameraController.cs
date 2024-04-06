@@ -29,7 +29,7 @@ public class CameraController : MonoBehaviour
         equipment.CurrentWeaponAttack.OnRecoil.AddListener(ScreenShake);
     }
 
-    void LateUpdate()
+    void Update()
 	{
         float verticalMovement = -Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
         float horizontalMovement = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
@@ -44,10 +44,6 @@ public class CameraController : MonoBehaviour
 
         transform.position = Vector3.Lerp(transform.position, targetTransform.position, smoothSpeed * Time.deltaTime);
         transform.eulerAngles = new Vector3(xRotation, yRotation, transform.eulerAngles.z);
-	}
-
-    void Update()
-    {
         if (Input.GetKeyDown(KeyCode.C))
         {
             backCamera.gameObject.SetActive(true);
@@ -59,6 +55,8 @@ public class CameraController : MonoBehaviour
             frontCamera.gameObject.SetActive(true);
         }
     }
+
+
 
     void ScreenShake()
     {

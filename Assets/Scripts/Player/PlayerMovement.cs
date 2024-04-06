@@ -11,6 +11,7 @@ public class PlayerMovement : AgentMovement
     [SerializeField] float moveSpeed;
     [SerializeField] float turnSpeed;
 
+    public bool inCombatMode = true;
     Transform cameraTransform;
     CharacterController charController;
     Vector3 moveVector;
@@ -41,6 +42,7 @@ public class PlayerMovement : AgentMovement
         {
             moveVector += cameraTransform.right;
         }
+        moveVector.y = 0;
         moveVector = moveVector.normalized;
         //moveVector = transform.TransformDirection(moveVector);
         charController.Move(moveVector * moveSpeed * Time.deltaTime);
@@ -52,9 +54,25 @@ public class PlayerMovement : AgentMovement
         }
 
         // rotational movement
-        torso.rotation = cameraTransform.rotation;
-        legs.rotation = cameraTransform.rotation;
-        legs.eulerAngles = new Vector3(0, legs.eulerAngles.y, 0);
+        if (inCombatMode)
+        {
+            if (moveVector.sqrMagnitude > 0)
+            {
+                transform.LookAt(transform.position + moveVector);
+                torso.localRotation = Quaternion.identity;
+            }
+            else
+            {
+                transform.rotation = Quaternion.LookRotation(cameraTransform.forward, Vector3.up);
+                transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0);
+                torso.rotation = cameraTransform.rotation;
+                legs.localRotation = Quaternion.identity;
+            }
+        }
+        else
+        {
+            torso.localRotation = Quaternion.identity;
+        }
 
         // fix falling through map
         if (transform.position.y <= -100)
