@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
 
 public class PlayerMovement : AgentMovement
 {
@@ -24,16 +23,23 @@ public class PlayerMovement : AgentMovement
     float diveForce = 400f;
     Vector3 diveForcePosition = new Vector3(0, 1.5f, 0);
 
+    Animator anim;
+
     void Awake()
     {
         cameraTransform = FindObjectOfType<CameraController>().transform;
         charController = GetComponent<CharacterController>();
         playerController = GetComponent<PlayerController>();
         rb = GetComponent<Rigidbody>();
+        anim = GetComponentInChildren<Animator>();
     }
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            anim.Play("Armature|Salute");
+        }
         // diving
         if (Input.GetKeyDown(KeyCode.LeftAlt))
         {

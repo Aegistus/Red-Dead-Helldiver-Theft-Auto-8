@@ -499,7 +499,7 @@ MonoBehaviour:
     noisePercent: 0.179
     dampingPercent: 0.532
     rotationPercent: 0
-  muzzleFlash: 
+  muzzleFlash: Muzzle_Flash
   shootSound: Pistol_Shoot
   projectileID: Revolver_Bullet
   projectileSpawnPoint: {fileID: 1032251621392644020}

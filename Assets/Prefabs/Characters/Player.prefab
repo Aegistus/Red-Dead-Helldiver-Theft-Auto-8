@@ -168,6 +168,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 36459730601558348}
+  - component: {fileID: 2173236795114885285}
   m_Layer: 0
   m_Name: Milkdiver
   m_TagString: Untagged
@@ -192,6 +193,26 @@ Transform:
   m_Father: {fileID: 2542434610876964788}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &2173236795114885285
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 849587420988742646}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0c7c739dfd7b61044b9e86b675f15cda, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &917436689637107899
 GameObject:
   m_ObjectHideFlags: 0
@@ -572,6 +593,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   strategemBallSpawnPoint: {fileID: 8652895589200749229}
   throwForce: 1000
+  beepSound: Beep_Boop
   unlockedStrategems:
   - {fileID: 11400000, guid: 3e06977a54d16bc4c8b9b741321ded81, type: 2}
   - {fileID: 11400000, guid: 6f899ff7e9798d241983af1d06e1c24d, type: 2}

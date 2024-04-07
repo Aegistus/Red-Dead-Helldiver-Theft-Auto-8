@@ -413,7 +413,7 @@ MonoBehaviour:
     noisePercent: 0.179
     dampingPercent: 0.532
     rotationPercent: 0
-  muzzleFlash: 
+  muzzleFlash: Muzzle_Flash
   shootSound: Shotgun_Shoot
   projectileID: Shotgun_Pellet
   projectileSpawnPoint: {fileID: 9103529041632284532}
