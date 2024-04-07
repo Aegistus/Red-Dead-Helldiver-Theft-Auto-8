@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5752dd9107f1a544fbb915bc58244804, type: 3}
+  m_Name: OutroDialogue
+  m_EditorClassIdentifier: 
+  frames:
+  - characterName: Milk President
+    text: Helldiver!
+  - characterName: Milk President
+    text: You've done it!
+  - characterName: Milk President
+    text: You've secured your place on the right side of history.
+  - characterName: Milk President
+    text: With all the milk you've gathered...
+  - characterName: Milk President
+    text: ...we can take the fight straight to the cows.
+  - characterName: Milk President
+    text: Super Duper Earth and its citizens are in your debt.
+  - characterName: Milk President
+    text: Now you get to relax until we inevitably send you on another suicide mission.
+  - characterName: God
+    text: Hey, it's God here.
+  - characterName: God
+    text: The game's over.
+  - characterName: God
+    text: Thanks for playing.
+  - characterName: God
+    text: Now go play the real Helldivers game.
+  - characterName: God
+    text: It's really good.

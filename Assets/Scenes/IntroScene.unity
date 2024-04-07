@@ -123,6 +123,75 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &32331077
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1697797765}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 8447bc3b80379374ebed98c7d31f37fa, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8447bc3b80379374ebed98c7d31f37fa, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8447bc3b80379374ebed98c7d31f37fa, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8447bc3b80379374ebed98c7d31f37fa, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8447bc3b80379374ebed98c7d31f37fa, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.00131
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8447bc3b80379374ebed98c7d31f37fa, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0036
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8447bc3b80379374ebed98c7d31f37fa, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.00077
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8447bc3b80379374ebed98c7d31f37fa, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7982319
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8447bc3b80379374ebed98c7d31f37fa, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.38397494
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8447bc3b80379374ebed98c7d31f37fa, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.46259642
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8447bc3b80379374ebed98c7d31f37fa, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.03733121
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8447bc3b80379374ebed98c7d31f37fa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 35.343
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8447bc3b80379374ebed98c7d31f37fa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 70.138
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8447bc3b80379374ebed98c7d31f37fa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 30.569
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8447bc3b80379374ebed98c7d31f37fa, type: 3}
+      propertyPath: m_Name
+      value: Milk_Bottle
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8447bc3b80379374ebed98c7d31f37fa, type: 3}
 --- !u!1 &67586904
 GameObject:
   m_ObjectHideFlags: 0
@@ -1040,6 +1109,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!4 &1697797765 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -1703574004462641728, guid: 33844df921a25ce4888ccdae60b209a8, type: 3}
+  m_PrefabInstance: {fileID: 125250079}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1899865142
 GameObject:
   m_ObjectHideFlags: 0
@@ -1227,6 +1301,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1990916846}
+  - component: {fileID: 1990916847}
   m_Layer: 0
   m_Name: Milk President
   m_TagString: Untagged
@@ -1251,6 +1326,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &1990916847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1990916845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e2bc2e031c3c9a4eaf9b414eee71050, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saluteOnStart: 1
 --- !u!1 &2051126111
 GameObject:
   m_ObjectHideFlags: 0
@@ -1357,6 +1445,31 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &2088897052 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 33844df921a25ce4888ccdae60b209a8, type: 3}
+  m_PrefabInstance: {fileID: 125250079}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &2088897053
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2088897052}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0c7c739dfd7b61044b9e86b675f15cda, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1001 &2326058052156114876
 PrefabInstance:
   m_ObjectHideFlags: 0

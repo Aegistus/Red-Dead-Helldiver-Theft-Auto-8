@@ -6,7 +6,7 @@ using System;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] string winScene = "WinScene";
+    [SerializeField] string winScene = "OutroScene";
 
     public static GameManager Instance {get; private set;}
     public Action<int> OnWantedLevelChange;

@@ -12,6 +12,7 @@ public class BanditMovement : AgentMovement
 
     NavMeshAgent navAgent;
     Transform playerTransform;
+    public bool Hunting => hunting;
 
     bool hunting = false;
 
@@ -38,6 +39,7 @@ public class BanditMovement : AgentMovement
                 InAttackRange = true;
                 transform.LookAt(playerTransform);
             }
+            hunting = true;
         }
     }
 }

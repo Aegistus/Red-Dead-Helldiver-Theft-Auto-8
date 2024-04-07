@@ -18,14 +18,16 @@ MonoBehaviour:
   - characterName: Milk President
     text: You're behind on your milk payments.
   - characterName: Milk President
-    text: And I'm afraid getting milk won't be as easy as last game.
+    text: And Super Duper Earth needs milk for the war effort!
+  - characterName: Milk President
+    text: I'm afraid getting milk won't be as easy as last game.
   - characterName: Milk President
     text: The darn Socialist cows have risen up!
   - characterName: Milk President
     text: They've created a cowtomaton army!
   - characterName: Milk President
-    text: Now get to your hell pod!
+    text: Get to your hell pod!
   - characterName: Milk President
     text: Show me you have what it takes to be free!
   - characterName: Milk President
-    text: (also pay off your milk debt)
+    text: (and pay off your milk debt)
