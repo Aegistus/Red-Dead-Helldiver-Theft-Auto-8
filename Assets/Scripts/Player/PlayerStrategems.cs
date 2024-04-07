@@ -13,6 +13,7 @@ public class PlayerStrategems : MonoBehaviour
 
     [SerializeField] Transform strategemBallSpawnPoint;
     [SerializeField] float throwForce = 100f;
+    [SerializeField] string beepSound = "Beep_Boop";
 
     public List<Strategem> unlockedStrategems = new List<Strategem>();
 
@@ -47,21 +48,25 @@ public class PlayerStrategems : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.UpArrow))
                 {
                     currentInput.Add(DDR_Direction.UP);
+                    SoundManager.Instance.PlaySoundAtPosition(beepSound, transform.position);
                     OnInputChange?.Invoke();
                 }
                 else if (Input.GetKeyDown(KeyCode.DownArrow))
                 {
                     currentInput.Add(DDR_Direction.DOWN);
+                    SoundManager.Instance.PlaySoundAtPosition(beepSound, transform.position);
                     OnInputChange?.Invoke();
                 }
                 else if (Input.GetKeyDown(KeyCode.RightArrow))
                 {
                     currentInput.Add(DDR_Direction.RIGHT);
+                    SoundManager.Instance.PlaySoundAtPosition(beepSound, transform.position);
                     OnInputChange?.Invoke();
                 }
                 else if (Input.GetKeyDown(KeyCode.LeftArrow))
                 {
                     currentInput.Add(DDR_Direction.LEFT);
+                    SoundManager.Instance.PlaySoundAtPosition(beepSound, transform.position);
                     OnInputChange?.Invoke();
                 }
                 CheckForCompletedStrategem();
