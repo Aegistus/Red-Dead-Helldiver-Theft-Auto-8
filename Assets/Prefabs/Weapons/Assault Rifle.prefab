@@ -163,13 +163,13 @@ MonoBehaviour:
     dampingPercent: 0.532
     rotationPercent: 0
   muzzleFlash: 
-  shootSound: 
+  shootSound: AR_Shoot
   projectileID: Revolver_Bullet
   projectileSpawnPoint: {fileID: 1848704249187356239}
   weaponModel: {fileID: 1848704248838569326}
   recoilXRotation: -5
   recoilYRotation: 1
-  recoilRotationRecovery: 1
+  recoilRotationRecovery: 4
   aimFOVChange: 10
   roundsPerMinute: 360
 --- !u!114 &1848704249734893203
@@ -184,7 +184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bab81f609a01ee45809ca538d9a2e92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reloadSound: 
+  reloadSound: AR_Reload
   maxLoadedAmmo: 30
   maxCarriedAmmo: 100000
   reloadTime: 2

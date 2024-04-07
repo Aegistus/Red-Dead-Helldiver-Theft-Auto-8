@@ -13,11 +13,15 @@ public class Ragdoll : MonoBehaviour
     {
         ragdollRBs = GetComponentsInChildren<Rigidbody>();
         anim = GetComponent<Animator>();
+        DisableRagdoll();
     }
 
     public void EnableRagdoll()
     {
-        anim.enabled = false;
+        if (anim)
+        {
+            anim.enabled = false;
+        }
         foreach (var rb in ragdollRBs)
         {
             rb.isKinematic = false;

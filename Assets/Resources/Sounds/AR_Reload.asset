@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 89c7e6321a0114c42b23a0ad6bede4fe, type: 3}
-  m_Name: Revolver_Shoot
+  m_Name: AR_Reload
   m_EditorClassIdentifier: 
   audioVariants:
-  - {fileID: 8300000, guid: 4c9e55c58b47e434297fec83f7d2f8a8, type: 3}
+  - {fileID: 8300000, guid: 349bccab0784503469b025b34cf064e6, type: 3}
   volume: 1
   volumeVariance: 0.1
   pitch: 1

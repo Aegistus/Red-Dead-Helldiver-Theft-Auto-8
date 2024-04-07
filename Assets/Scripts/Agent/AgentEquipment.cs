@@ -5,10 +5,12 @@ using System;
 
 public class AgentEquipment : MonoBehaviour
 {
+    [SerializeField] LayerMask groundLayer;
+    [SerializeField] Transform aimReference;
     [SerializeField] Transform weaponHoldTarget;
     [SerializeField] float weaponOffsetChangeSpeed = 1f;
     [SerializeField] DamageSource damageSource;
-    [SerializeField] Transform arms;
+    //[SerializeField] Transform arms;
     [SerializeField] Vector3 armsEquippedRotation;
 
     public event Action OnWeaponChange;
@@ -81,7 +83,7 @@ public class AgentEquipment : MonoBehaviour
     {
         if (weapon == null)
         {
-            arms.localRotation = Quaternion.identity;
+            //arms.localRotation = Quaternion.identity;
             return;
         }
         CurrentWeapon = weapon;
@@ -90,7 +92,7 @@ public class AgentEquipment : MonoBehaviour
         weapon.gameObject.transform.localPosition = weapon.attack.HoldOffset;
         weapon.gameObject.transform.localRotation = Quaternion.identity;
         CurrentWeapon.attack.Source = damageSource;
-        arms.localEulerAngles = armsEquippedRotation;
+        //arms.localEulerAngles = armsEquippedRotation;
         OnWeaponChange?.Invoke();
     }
 
