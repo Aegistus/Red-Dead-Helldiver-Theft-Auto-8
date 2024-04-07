@@ -141,10 +141,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c41a75b8f11438b4c8eeef6e8b58a391, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  aimReference: {fileID: 0}
   weaponHoldTarget: {fileID: 5086762906562924700}
   weaponOffsetChangeSpeed: 1
   damageSource: 1
-  arms: {fileID: 3960350759304153772}
   armsEquippedRotation: {x: 0, y: 0, z: 0}
 --- !u!54 &5351921588717240466
 Rigidbody:
@@ -317,6 +320,10 @@ PrefabInstance:
       propertyPath: holdOffset.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2570021904619861529, guid: d300549496eff644591e4661c7a7bf9e, type: 3}
+      propertyPath: projectileID
+      value: Laser_Shot
+      objectReference: {fileID: 0}
     - target: {fileID: 2570021904619861532, guid: d300549496eff644591e4661c7a7bf9e, type: 3}
       propertyPath: m_Name
       value: Revolver
@@ -461,11 +468,6 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 996ff6eb61a79da4096d9da050709c9d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e419a5440da42cd4baa7e0859ef92a14, type: 3}
---- !u!4 &3960350759304153772 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6303818255995492756, guid: e419a5440da42cd4baa7e0859ef92a14, type: 3}
-  m_PrefabInstance: {fileID: 7029652028267565880}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7351262429378213075 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e419a5440da42cd4baa7e0859ef92a14, type: 3}
