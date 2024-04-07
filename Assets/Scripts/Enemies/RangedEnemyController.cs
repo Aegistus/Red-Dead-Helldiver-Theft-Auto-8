@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BanditController : AgentController
+public class RangedEnemyController : AgentController
 {
     [SerializeField] float attackInterval = .5f;
 
@@ -18,11 +18,11 @@ public class BanditController : AgentController
 
     private void Update()
     {
-        EndAttack = false;
+        StartAttack = false;
         Reload = false;
         if (movement.InAttackRange && canAttack)
         {
-            EndAttack = true;
+            StartAttack = true;
             StartCoroutine(AttackDelayCoroutine());
         }
         if (equipment.CurrentWeaponAmmunition.CurrentLoadedAmmo == 0)

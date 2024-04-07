@@ -40,13 +40,13 @@ public class WastedUI : MonoBehaviour
         {
             endElements[i].SetActive(true);
         }
-        StartCoroutine(ReturnToMainMenu());
+        StartCoroutine(RestartScene());
     }
 
-    IEnumerator ReturnToMainMenu()
+    IEnumerator RestartScene()
     {
         yield return new WaitForSeconds(4f);
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     void OnDestroy()
