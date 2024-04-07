@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/IntroScene.unity
     guid: 45aee868a80de4d4d9185d890b52a2a7
   - enabled: 1
+    path: Assets/Scenes/DiveCinematic.unity
+    guid: 001e5ec131fb1974eb319337b4703b88
+  - enabled: 1
     path: Assets/Scenes/GameScene.unity
     guid: 621002447ddf25b4a85931f173c89f18
   - enabled: 1

@@ -13,14 +13,19 @@ MonoBehaviour:
   m_Name: IntroDialogue
   m_EditorClassIdentifier: 
   frames:
-  - characterName: Milk Lord
-    text: Hey Pardner!
-  - characterName: Milk Lord
+  - characterName: Milk President
+    text: Hey Helldiver!
+  - characterName: Milk President
     text: You're behind on your milk payments.
-  - characterName: Milk Lord
-    text: I know your cows ran away, but that's no excuse to not pay!
-  - characterName: Milk Lord
-    text: If you don't pay your milk debt by the end of the day, I'll break your
-      frickin knees!
-  - characterName: Milk Lord
-    text: Yeeeeeee haaaaw
+  - characterName: Milk President
+    text: And I'm afraid getting milk won't be as easy as last game.
+  - characterName: Milk President
+    text: The darn Socialist cows have risen up!
+  - characterName: Milk President
+    text: They've created a cowtomaton army!
+  - characterName: Milk President
+    text: Now get to your hell pod!
+  - characterName: Milk President
+    text: Show me you have what it takes to be free!
+  - characterName: Milk President
+    text: (also pay off your milk debt)
