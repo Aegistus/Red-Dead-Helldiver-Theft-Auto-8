@@ -113,6 +113,17 @@ public class AgentEquipment : MonoBehaviour
         weaponRB.isKinematic = true;
         Weapon newWeapon = new Weapon(weaponGO);
         weaponGO.GetComponent<BoxCollider>().enabled = false;
+        if (CurrentWeapon != null)
+        {
+            if (HasTwoWeapons)
+            {
+                DropWeapon();
+            }
+            else
+            {
+                UnEquip(CurrentWeapon);
+            }
+        }
         if (PrimaryWeapon == null)
         {
             PrimaryWeapon = newWeapon;
@@ -121,10 +132,7 @@ public class AgentEquipment : MonoBehaviour
         {
             SecondaryWeapon = newWeapon;
         }
-        if (CurrentWeapon != null)
-        {
-            UnEquip(CurrentWeapon);
-        }
+
         Equip(newWeapon);
     }
 
