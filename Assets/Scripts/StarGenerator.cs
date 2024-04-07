@@ -15,7 +15,7 @@ public class StarGenerator : MonoBehaviour
     {
         for (int i = 0; i < max; i++)
         {
-            Vector3 position = new Vector3(Random.Range(negativeExtents.x, positiveExtents.x), Random.Range(negativeExtents.y, positiveExtents.y), zValue);
+            Vector3 position = transform.InverseTransformPoint(new Vector3(Random.Range(negativeExtents.x, positiveExtents.x), Random.Range(negativeExtents.y, positiveExtents.y), zValue));
             position += transform.position;
             Instantiate(starPrefab, position, Quaternion.identity, transform);
         }
