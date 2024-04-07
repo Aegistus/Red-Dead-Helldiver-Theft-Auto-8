@@ -577,6 +577,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6f899ff7e9798d241983af1d06e1c24d, type: 2}
   - {fileID: 11400000, guid: 3630d43b029145443a8aba204553583b, type: 2}
   - {fileID: 11400000, guid: 2a3aef36390d5ff448fd516540f2f909, type: 2}
+  - {fileID: 11400000, guid: ea456a20f12e2a7459142315178f211c, type: 2}
   currentInput: 
 --- !u!143 &2542434610876964793
 CharacterController:

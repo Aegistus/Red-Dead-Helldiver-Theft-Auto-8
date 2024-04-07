@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c11da3c55ce6d04dac6ab2883a90ad0, type: 3}
+  m_Name: Orbital 380MM HE Barrage
+  m_EditorClassIdentifier: 
+  ddrCode: 03000000010000000000000000000000020000000100000001000000
+  strategemBallPrefab: {fileID: 8219670681438928766, guid: 0c9880fd5f65e704eaca9994d9e511fd, type: 3}

@@ -9,7 +9,7 @@ public abstract class StrategemBall : MonoBehaviour
     
     LineRenderer beam;
 
-    private void Start()
+    protected virtual void Start()
     {
         beam = GetComponent<LineRenderer>();
     }
