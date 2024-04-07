@@ -179,6 +179,9 @@ MonoBehaviour:
   throwForce: 1000
   unlockedStrategems:
   - {fileID: 11400000, guid: 906138e1237937d478c2741a0cd24288, type: 2}
+  - {fileID: 11400000, guid: 3e06977a54d16bc4c8b9b741321ded81, type: 2}
+  - {fileID: 11400000, guid: 6f899ff7e9798d241983af1d06e1c24d, type: 2}
+  - {fileID: 11400000, guid: 3630d43b029145443a8aba204553583b, type: 2}
   currentInput: 
 --- !u!143 &2542434610876964793
 CharacterController:
