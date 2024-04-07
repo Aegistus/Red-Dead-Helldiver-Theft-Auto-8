@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Explosion : MonoBehaviour
 {
+    [SerializeField] string soundName;
     [SerializeField] float damage = 100f;
     [SerializeField] float radius = 10f;
     [SerializeField] LayerMask targetLayers;
@@ -26,6 +27,7 @@ public class Explosion : MonoBehaviour
                 pHealth.Damage(adjustedDamage);
             }
         }
+        SoundManager.Instance.PlaySoundAtPosition(soundName, transform.position);
         StartCoroutine(DestroyCoroutine());
     }
 

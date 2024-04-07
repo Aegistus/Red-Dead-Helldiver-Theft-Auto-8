@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ed054183296a4747bb12250fd5078f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundName: Orbital_Explosion
   damage: 150
   radius: 6
   targetLayers:
