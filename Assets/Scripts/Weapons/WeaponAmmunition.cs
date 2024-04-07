@@ -20,6 +20,8 @@ public abstract class WeaponAmmunition : MonoBehaviour
     protected int currentCarriedAmmo;
     protected int reloadSoundID;
 
+    Light[] lights;
+
     protected virtual void Awake()
     {
         currentLoadedAmmo = maxLoadedAmmo;
@@ -29,6 +31,7 @@ public abstract class WeaponAmmunition : MonoBehaviour
     private void Start()
     {
         reloadSoundID = SoundManager.Instance.GetSoundID(reloadSound);
+        lights = GetComponentsInChildren<Light>();
     }
 
     public bool TryUseAmmo()
@@ -91,6 +94,10 @@ public abstract class WeaponAmmunition : MonoBehaviour
 
     IEnumerator ReloadSpinCoroutine()
     {
+        for (int i = 0; i < lights.Length; i++)
+        {
+            lights[i].enabled = false;
+        }
         Vector3 startingPos = transform.localPosition;
         transform.Translate(Vector3.left * .5f, Space.Self);
         while (Reloading)
@@ -100,6 +107,10 @@ public abstract class WeaponAmmunition : MonoBehaviour
         }
         transform.localEulerAngles = Vector3.zero;
         transform.localPosition = startingPos;
+        for (int i = 0; i < lights.Length; i++)
+        {
+            lights[i].enabled = true;
+        }
     }
 
 }
