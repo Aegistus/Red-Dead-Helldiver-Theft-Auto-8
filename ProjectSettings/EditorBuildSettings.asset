@@ -15,9 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/DiveCinematic.unity
     guid: 001e5ec131fb1974eb319337b4703b88
   - enabled: 1
-    path: Assets/Scenes/WinScene.unity
-    guid: 4259318ef511d894ab43447de7ca736a
-  - enabled: 1
     path: Assets/Scenes/HellGameScene.unity
     guid: d0f8516a7f90ed449bed3e827f56dae5
+  - enabled: 1
+    path: Assets/Scenes/OutroScene.unity
+    guid: b35e55cd02398bf45bef229da7c2c81f
   m_configObjects: {}

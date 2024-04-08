@@ -46,7 +46,7 @@ public class OrbitalBarrageBall : StrategemBall
             yield return new WaitForSeconds(roundDelay);
             Vector2 randPos = Random.insideUnitCircle * radius;
             Vector3 spawnPoint = new Vector3(transform.position.x + randPos.x, spawnHeight, transform.position.z + randPos.y);
-            Instantiate(projectilePrefab, randPos, Quaternion.identity);
+            Instantiate(projectilePrefab, spawnPoint, Quaternion.identity);
         }
         Destroy(gameObject);
     }

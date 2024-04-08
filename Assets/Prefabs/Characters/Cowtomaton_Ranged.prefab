@@ -67,7 +67,7 @@ MonoBehaviour:
     dampingPercent: 0
     rotationPercent: 0
   muzzleFlash: 
-  shootSound: 
+  shootSound: Laser_Shoot
   projectileID: Laser_Shot
   projectileSpawnPoint: {fileID: 0}
   weaponModel: {fileID: 3201669867803642723}
